@@ -1,0 +1,35 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  width: clamp(1.5rem, 20%, 3rem);
+  height: 100%;
+  border-radius: 0px 5px 5px 0px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  align-items: center;
+  justify-content: center; /* Center vertically */
+
+}
+
+ul {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+  display: flex;
+  flex-direction: column;
+}
+
+li~li {
+  margin-top: clamp(5rem,20%,15rem);
+
+}
+
+i {
+  color: white;
+}

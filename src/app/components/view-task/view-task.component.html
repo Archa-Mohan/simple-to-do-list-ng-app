@@ -1,0 +1,52 @@
+<div class="container content">
+  <h1>{{ listName }}</h1>
+  <div *ngIf="taskList.length > 0; else displayMsg" class="card custom-card">
+    <div class="card-body">
+      <table class="table">
+        <tbody>
+          <tr *ngFor="let task of taskList">
+            <td>
+              <input
+                type="radio"
+                name="{{ task.id }}"
+                id="{{ task.id }}"
+                checked
+              />
+            </td>
+            <td>{{ task.name | titlecase  }}</td>
+            <td>{{ task.description | titlecase  }}</td>
+            <td>
+              <button class="btn btn-block priority" disabled>
+                {{ task.priority | titlecase }}
+              </button>
+            </td>
+            <td>{{ task.dueDate }}</td>
+            <td>
+              <button class="btn btn-block category" disabled>
+                {{ task.category | titlecase  }}
+              </button>
+            </td>
+            <td>
+              <button class="btn btn-block category" disabled>
+                {{ task.progress | titlecase }}
+              </button>
+            </td>
+            <td>
+              <a routerLink="/add/:id" (click)="edit(task.id)">
+                <i class="fa fa-edit"></i>
+              </a>
+            </td>
+            <td>
+                <a routerLink="" (click)="delete(task.id)">
+                  <i class="fa fa-trash"></i>
+                </a>
+              </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <ng-template #displayMsg>
+    <h5 class="display-msg">Add tasks to be displayed</h5>
+  </ng-template>
+</div>

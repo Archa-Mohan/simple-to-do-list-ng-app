@@ -1,0 +1,26 @@
+.content {
+  position: relative;
+  top: 2em;
+  /* width: fit-content; */
+}
+
+h1 {
+  font-weight: bold;
+}
+
+.custom-card {
+  margin-top: 5%;
+  width: clamp(50%, 60%, 75%);
+  background-color: rgb(240, 240, 240);
+  left: clamp(2rem, 10%, 5rem);
+}
+
+form div{
+  margin-bottom: 1rem;
+}
+
+input[type="radio"]:checked{
+  color:black;
+  /* background-color: blue; */
+  border:0px;
+}

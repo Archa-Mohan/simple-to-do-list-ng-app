@@ -1,0 +1,157 @@
+<div class="container content">
+  <h1>Add Tasks</h1>
+  <div class="card custom-card">
+    <div class="card-body">
+      <form [formGroup]="addTaskForm">
+        <div class="form-group">
+          <input
+          type="text"
+          class="form-control"
+          formControlName="id"
+          placeholder="Enter task"
+          name="id" hidden
+        />
+        </div>
+        <div class="form-group">
+          <input
+            type="text"
+            class="form-control"
+            formControlName="name"
+            placeholder="Enter task"
+            name="name"
+          />
+        </div>
+        <div class="form-group">
+          <input
+            type="text"
+            class="form-control"
+            formControlName="description"
+            placeholder="Enter task description" name="description"
+          />
+        </div>
+        <div class="form-group">
+          <input
+            type="date"
+            class="form-control"
+            formControlName="dueDate"
+            name="dueDate"
+          />
+        </div>
+        <div class="form-group">
+          <div class="form-check-inline">
+            <input
+              type="radio"
+              class="form-check-input"
+              formControlName="priority"
+              value="high" name="priority"
+            />
+            <label class="form-check-label" for="priority">High</label>
+          </div>
+          <div class="form-check-inline">
+            <input
+              type="radio"
+              class="form-check-input"
+              name="priority"
+              formControlName="priority"
+              value="medium"
+            />
+            <label class="form-check-label" for="priority">Medium</label>
+          </div>
+          <div class="form-check-inline">
+            <input
+              type="radio"
+              class="form-check-input"
+              formControlName="priority"
+              name="priority"
+              value="low" checked
+            />
+            <label class="form-check-label" for="priority">Low</label>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="form-check-inline">
+            <input
+              type="radio"
+              class="form-check-input"
+              formControlName="category"
+              name="category"
+              value="study"
+            />
+            <label class="form-check-label" for="category">Study</label>
+          </div>
+          <div class="form-check-inline">
+            <input
+              type="radio"
+              class="form-check-input"
+              formControlName="category"
+              name="category"
+              value="personal"
+            />
+            <label class="form-check-label" for="category">Personal</label>
+          </div>
+          <div class="form-check-inline">
+            <input
+              type="radio"
+              class="form-check-input"
+              formControlName="category"
+              name="category" checked
+              value="official"
+            />
+            <label class="form-check-label" for="category">Official</label>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="form-check-inline">
+            <input
+              type="radio"
+              class="form-check-input"
+              formControlName="progress"
+              name="progress"
+              value="not-started"
+            />
+            <label class="form-check-label" for="progress">Not Started</label>
+          </div>
+          <div class="form-check-inline">
+            <input
+              type="radio"
+              class="form-check-input"
+              formControlName="progress"
+              name="progress"
+              value="in-progress"
+            />
+            <label class="form-check-label" for="progress">In Progress</label>
+          </div>
+          <div class="form-check-inline">
+            <input
+              type="radio"
+              class="form-check-input"
+              formControlName="progress"
+              name="progress" checked
+              value="Completed"
+            />
+            <label class="form-check-label" for="progress">Completed</label>
+          </div>
+        </div>
+
+        <!-- <div class="form-control">
+                <label for="category">Select a Category</label>
+                <select class="form-control" id="category" name="category" [(ngModel)]="selectedCategory">
+                    <option value="" disabled>Select</option>
+                    <option value="personal">Personal</option>
+                    <option value="study">Study</option>
+                    <option value="official">Official</option>
+                    <option value="misc">Misc</option>
+                  </select>
+            </div> -->
+        <button
+          class="btn btn-block btn-primary"
+          type="submit"
+          (submit)="submitAddForm()"
+          (click)="submitAddForm()"
+        >
+          Submit
+        </button>
+      </form>
+    </div>
+  </div>
+</div>

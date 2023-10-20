@@ -1,0 +1,86 @@
+.content {
+  position: relative;
+  left: clamp(1rem, 15%, 2rem);
+  right: clamp(1.5rem, 20%, 3rem);
+  margin: 2.5%;
+  width: fit-content;
+}
+
+h1 {
+  font-weight: bold;
+}
+
+input[type="radio"]:checked {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: #000000;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+i {
+  color: black;
+}
+
+/* display no tasks message. */
+.display-msg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: clamp(15%, 35%, 55%);
+  left: clamp(10%, 40%, 50%);
+  color: gray;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.custom-card {
+  margin-top: 5%;
+  /* width: auto; */
+  width: clamp(50%, 100%, 100%);
+
+  background-color: rgb(240, 240, 240);
+  left: clamp(2rem, 10%, 5rem);
+  /* right: clamp(5rem, 25%, 6rem); */
+}
+
+tr,
+table,
+td {
+  position: relative;
+  background-color: rgb(240, 240, 240);
+  border-radius: 5px;
+  color: black;
+  word-wrap: break-word;
+}
+
+tr td:not(:first-child),
+tr td:not(:nth-last-child(2)),
+tr td:not(:last-child) {
+  width: clamp(2rem, 10rem, 30rem);
+}
+
+tr td:nth-last-child(2),
+tr td:last-child,
+tr td:first-child {
+  font-weight: 500;
+  width: 5%;
+}
+
+button {
+  border-radius: 10px;
+  width: clamp(95%, 100%, 45%);
+}
+
+.priority:disabled {
+  background-color: black;
+  color: white;
+}
+
+.category:disabled {
+  background-color: gray;
+  color: white;
+}
